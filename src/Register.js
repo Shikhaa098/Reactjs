@@ -1,4 +1,3 @@
-// Register.js
 import React from "react";
 import { useForm } from "react-hook-form";
 import "./Register.css";
@@ -39,59 +38,59 @@ const Register = () => {
         <h2>Register</h2>
         <form onSubmit={handleSubmit(onSubmit)} className="register-form">
           <div>
-            <label>Full Name</label>
             <input
               {...register("fullName", { required: "Full Name is required" })}
+              placeholder="Full Name"
             />
             {errors.fullName && <p>{errors.fullName.message}</p>}
           </div>
           <div>
-            <label>Email Address</label>
             <input
               type="email"
               {...register("email", { required: "Email is required" })}
+              placeholder="Email Address"
             />
             {errors.email && <p>{errors.email.message}</p>}
           </div>
           <div>
-            <label>Date of Birth</label>
             <input
               type="date"
               {...register("dob", {
                 required: "Date of Birth is required",
                 validate: validateDOB,
               })}
+              placeholder="Date of Birth"
             />
             {errors.dob && <p>{errors.dob.message}</p>}
           </div>
           <div>
-            <label>Location</label>
             <input
               {...register("location", { required: "Location is required" })}
+              placeholder="Location"
             />
             {errors.location && <p>{errors.location.message}</p>}
           </div>
           <div>
-            <label>Password</label>
             <input
               type="password"
               {...register("password", { required: "Password is required" })}
+              placeholder="Password"
             />
             {errors.password && <p>{errors.password.message}</p>}
           </div>
           <div>
-            <label>Confirm Password</label>
             <input
               type="password"
               {...register("confirmPassword", {
                 required: "Confirm Password is required",
                 validate: validatePasswordMatch,
               })}
+              placeholder="Confirm Password"
             />
             {errors.confirmPassword && <p>{errors.confirmPassword.message}</p>}
           </div>
           <button type="submit" className="submit-button">
-            Registersssssssssssssssssssssssss
+            Register
           </button>
         </form>
       </div>
