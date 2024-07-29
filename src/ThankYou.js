@@ -1,7 +1,7 @@
 // ThankYou.js
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "./ThankYou.css"; // Import CSS for styling
+import "./ThankYou.css"; 
 
 const ThankYou = () => {
   const navigate = useNavigate();

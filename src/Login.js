@@ -1,6 +1,7 @@
-// Login.js
 import React from "react";
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
+import "./Login.css";
 
 const Login = () => {
   const {
@@ -8,9 +9,12 @@ const Login = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
+  const navigate = useNavigate();
 
   const onSubmit = (data) => {
     console.log(data);
+    // Pass usernameOrEmail as state to the OTP page
+    navigate("/otp", { state: { usernameOrEmail: data.usernameOrEmail } });
   };
 
   return (
